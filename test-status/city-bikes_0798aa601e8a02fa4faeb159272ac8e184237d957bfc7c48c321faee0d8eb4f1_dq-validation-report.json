@@ -1,0 +1,34 @@
+{
+  "sampleSize": 2000,
+  "rulesetResults": [
+    {
+      "name": "example-ruleset1",
+      "description": null,
+      "arn": "arn:aws:databrew:us-east-2:971647003174:ruleset/example-ruleset1",
+      "lastModifiedDate": "Tue Dec 09 21:06:33 UTC 2025",
+      "ruleResults": [
+        {
+          "name": "Rule 1",
+          "definition": {
+            "Name": "Rule 1",
+            "Disabled": false,
+            "CheckExpression": "AGG(:col1, MISSING_VALUES_COUNT) < :val1",
+            "SubstitutionMap": {
+              ":col1": "`starttime`",
+              ":val1": "1"
+            }
+          },
+          "message": "ERROR - MISSING_VALUES_COUNT is not a valid statistic",
+          "status": "ERROR"
+        }
+      ],
+      "status": "ERROR"
+    }
+  ],
+  "jobName": "city-bikes profile job",
+  "jobRunId": "db_0798aa601e8a02fa4faeb159272ac8e184237d957bfc7c48c321faee0d8eb4f1",
+  "location": "s3://971647003174-us-east-2-alpha-internal/city-bikes_0798aa601e8a02fa4faeb159272ac8e184237d957bfc7c48c321faee0d8eb4f1_dq-validation-report.json",
+  "startedOn": "2025-12-09T21:07:42.343881",
+  "writtenOn": "2025-12-09T21:08:53.676392",
+  "version": "1.0"
+}
